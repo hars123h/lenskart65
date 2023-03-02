@@ -137,7 +137,7 @@ const Register = () => {
                 </svg>
                 Register</div>
             <div className='text-center'>
-                <img src={lenskart_logo} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mt-8 mb-8' width={240} />
+                <img src={lenskart_logo} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mt-8 mb-2' width={240} />
             </div>
             <div style={{ boxShadow: " -1px 1px 5px 5px rgb(209, 213, 219)" }} className="box mb-20   gap-2 m-auto  rounded-xl lg:w-2/5 w-[85%]  p-4 w-50% flex flex-col">
                 <div className='outline-none flex items-center justify-between mb-2 border-b-2 border-gray-300 rounded-full'>
@@ -171,7 +171,7 @@ const Register = () => {
                 <input value={invt} onChange={e => setInvt(e.target.value)} type="text" className='p-2 mb-2 placeholder-gray-600 placeholder:text-xs  outline-none border border-gray-300 rounded-full' placeholder='Invitation code' name="invite_code" id="inv_code" />
 
                 <button onClick={handleRegister} className='bg-red-800 text-white pt-2 pb-1 rounded-full text-lg'>Register</button>
-                <div onClick={() => navigate('/login')} className='cursor-pointer text-center text-red-800 mt-2 p-2 mb-2 bg-white font-medium  rounded-full'>
+                <div onClick={() => navigate('/login')} className='cursor-pointer text-center text-red-800 mt-2 p-2 mb-2 bg-white font-medium  rounded-full border border-gray-200'>
                     Already have an account, log in
                 </div>
             </div>
