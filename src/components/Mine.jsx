@@ -28,6 +28,8 @@ import asset41 from '../images/assets4/asset 1.png'
 import asset42 from '../images/assets4/asset 2.png'
 import asset44 from '../images/assets4/asset 4.png'
 import asset45 from '../images/assets4/asset 5.png'
+import lenskart_logo from '../images/lenskart_logo.png';
+
 
 const customStyles2 = {
   content: {
@@ -177,7 +179,7 @@ const Mine = () => {
 
       <div className="flex flex-col bg-white gap-3">
         <div className='flex  justify-start items-center gap-1 p-3 mt-4'>
-          <img src={tuborg_logo} alt="wind_login" width={150} className="bg-white py-2 px-3 rounded-full" />
+          <img src={lenskart_logo} alt="wind_login" width={130} className="bg-white py-2 px-3 rounded-full" />
           <div className='text-2xl'>{mobileno} <span className='border border-red-700 px-1 text-red-700 rounded-xl text-xs'>LV0</span></div>
         </div>
 
@@ -202,29 +204,29 @@ const Mine = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 p-2 gap-2 font-medium text-sm mt-14">
+      <div className="grid grid-cols-2 p-2 gap-2 font-medium text-sm mt-10">
 
         <div className="flex flex-col items-center bg-recharge-bg py-1 rounded-[50%]" onClick={() => navigate('/project')}>
-          <div className='w-[35%]'><img src={asset41} alt="setting" /></div>
+          <div className='w-[30%]'><img src={asset41} alt="setting" /></div>
           <div className='flex-grow text-lg font-semibold'>Plan Details</div>
  
         </div>
 
         <div className="flex flex-col items-center bg-recharge-bg py-1 rounded-[50%]" onClick={() => navigate('/record')}>
-          <div className='w-[35%]'><img src={asset42} alt="setting" /></div>
+          <div className='w-[30%]'><img src={asset42} alt="setting" /></div>
 
           <div className='flex-grow text-lg font-semibold'>Account record</div>
           
         </div>
 
         <div className="flex flex-col items-center bg-recharge-bg py-1 rounded-[50%]" onClick={() => navigate('/settings', { state: { withdrawalPassword: originalwpwd, loginPassword: originalpwd } })}>
-          <div className='w-[35%]'><img src={asset44} alt="setting"  /></div>
+          <div className='w-[30%]'><img src={asset44} alt="setting"  /></div>
           <div className='flex-grow text-lg font-semibold'>Personal Information</div>
           
         </div>
 
         <div className="flex flex-col items-center bg-recharge-bg  py-1 rounded-[50%]" onClick={() => navigate('/company')}>
-          <div className='w-[35%]'><img src={asset45} alt="setting"  /></div>
+          <div className='w-[30%]'><img src={asset45} alt="setting"  /></div>
           <div className='flex-grow text-lg font-semibold'>Company</div>
         </div>
 

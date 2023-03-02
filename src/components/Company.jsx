@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import waltonbd_logo from '../images/waltonbd_logo.jpg'
 import tuborg_company from '../images/tuborg_company.jpg';
 import asset43 from '../images/assets4/asset 0.jpeg'
+import lenskart_logo from '../images/lenskart_logo.png';
+
 
 
 const Company = () => {
@@ -21,7 +23,7 @@ const Company = () => {
             </div>
 
             <div className="hp_company mt-10">
-                <img src={asset43} alt="hp" className='sm:w-3/6 md:w-2/6 mx-auto' width={200} />
+                <img src={lenskart_logo} alt="hp" className='sm:w-3/6 md:w-2/6 mx-auto' width={240} />
             </div>
 
             <div className=" cpy_info sm:w-4/5 lg:w-3/4 mx-auto mt-5">

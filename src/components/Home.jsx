@@ -348,7 +348,7 @@ const Home = () => {
             {/*Navigation bar */}
             <div className="bg-white  text-black font-semibold relative flex overflow-x-hidden  mx-auto py-2  sm:w-3/5 lg:w-3/5 overflow-y-hidden">
                 <div className="flex flex-row justify-around text-xs items-center w-full py-2 px-3">
-                    <a href="https://t.me/TuborgbeerApp1" className=' no-underline  cursor-pointer'>
+                    <a href="https://t.me/LenscartEarningApp" className=' no-underline  cursor-pointer'>
                         <div className='cursor-pointer mx-2 flex flex-col justify-center items-center'>
                             <img src={asset30} alt="online" className='w-10' />
                             <div>Channel</div>
@@ -376,8 +376,8 @@ const Home = () => {
             </div>
 
             <div className='bg-red-800 text-md text-white flex mt-2 items-center  mb-2 sm:w-3/5 lg:w-3/5 mx-auto'>
-                <div className={`w-1/2 text-center bg-white  py-4 ${currentVisible === 'big' ? ' bg-red-800 text-white' : 'text-black font-medium'}`} onClick={() => setCurrentVisible('big')}>Normal Glasses</div>
-                <div className={`w-1/2 text-center bg-white py-4 ${currentVisible === 'short' ? ' bg-red-800 text-white' : 'text-black font-medium'}`} onClick={() => setCurrentVisible('short')}>VIP Glasses</div>
+                <div className={`w-1/2 text-center  py-4 ${currentVisible === 'big' ? ' bg-red-800 text-white' : 'text-black font-medium bg-white'}`} onClick={() => setCurrentVisible('big')}>Normal Glasses</div>
+                <div className={`w-1/2 text-center  py-4 ${currentVisible === 'short' ? ' bg-red-800 text-white' : 'text-black font-medium bg-white'}`} onClick={() => setCurrentVisible('short')}>VIP Glasses</div>
             </div>
 
             {/*Plans Cards*/}
