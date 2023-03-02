@@ -221,7 +221,7 @@ const Mine = () => {
 
         <div className="flex flex-col items-center bg-recharge-bg py-1 rounded-[50%]" onClick={() => navigate('/settings', { state: { withdrawalPassword: originalwpwd, loginPassword: originalpwd } })}>
           <div className='w-[30%]'><img src={asset44} alt="setting"  /></div>
-          <div className='flex-grow text-lg font-semibold'>Personal Information</div>
+          <div className='flex-grow text-sm font-semibold'>Personal Information</div>
           
         </div>
 

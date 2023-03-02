@@ -86,7 +86,7 @@ const Invite = () => {
 
                 <div className="info w-1/2 p-3 sm:text-xs md:text-md flex flex-col gap-2 rounded-lg bg-white text-red-800 font-bold mt-5">
                     <div className='font-bold'>Invitation code</div>
-                    <div className='p-3 rounded-md border border-cyan-400'>{userDetails.user_invite}</div>
+                    <div className='p-3 rounded-md border border-red-800'>{userDetails.user_invite}</div>
                     <CopyToClipboard text={userDetails.user_invite} onCopy={() => toaster('Copied to clipboard')}>
                         <span className='mx-auto bg-red-800 text-white p-2 rounded-md'>Copy code</span>
                     </CopyToClipboard>
