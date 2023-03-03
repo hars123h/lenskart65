@@ -376,8 +376,8 @@ const Home = () => {
             </div>
 
             <div className='bg-red-800 text-md text-white flex mt-2 items-center  mb-2 sm:w-3/5 lg:w-3/5 mx-auto'>
-                <div className={`w-1/2 text-center  py-4 ${currentVisible === 'big' ? ' bg-red-800 text-white' : 'text-black font-medium bg-white'}`} onClick={() => setCurrentVisible('big')}>Normal Glasses</div>
-                <div className={`w-1/2 text-center  py-4 ${currentVisible === 'short' ? ' bg-red-800 text-white' : 'text-black font-medium bg-white'}`} onClick={() => setCurrentVisible('short')}>VIP Glasses</div>
+                <div className={`w-1/2 text-center  py-4 ${currentVisible === 'big' ? ' text-black font-medium bg-white' : ' bg-red-800 text-white'}`} onClick={() => setCurrentVisible('big')}>Normal Glasses</div>
+                <div className={`w-1/2 text-center  py-4 ${currentVisible === 'short' ? ' text-black font-medium bg-white' : ' bg-red-800 text-white'}`} onClick={() => setCurrentVisible('short')}>VIP Glasses</div>
             </div>
 
             {/*Plans Cards*/}
