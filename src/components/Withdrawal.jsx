@@ -248,7 +248,7 @@ const Withdrawal = () => {
             </div>
 
             <div className="part1 bg-white p-3 rounded-lg mx-3 mt-5 flex flex-col gap-6 text-xs">
-                <div className='text-pink-600 font-medium'>* Withdrawal time 09:00 - 19:00</div>
+                <div className='text-pink-600 font-medium'>* Withdrawal time 10:00 - 19:00</div>
                 <div className='text-pink-600 font-medium'>* Minimum withdrawal amount: {amountDetails.mwamount}.</div>
                 <div className='text-pink-600 font-medium'>* Correctly fill in the bank information IFSC code, payee name, bank card number, otherwise the withdrawal will fail.</div>
                 <div className='text-pink-600 font-medium'>* The actual arrival time of all withdrawals is subject to the processing time of the local bank.</div>

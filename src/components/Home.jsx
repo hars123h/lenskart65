@@ -201,8 +201,8 @@ const Home = () => {
     }
 
     const isBetween = () => {
-        var startTime = '9:00:00';
-        var endTime = '22:00:00';
+        var startTime = '10:00:00';
+        var endTime = '19:00:00';
 
         var currentDate = new Date()
 
@@ -366,8 +366,8 @@ const Home = () => {
                     </div>
 
                     <div className='cursor-pointer mx-2 flex flex-col justify-center items-center'>
-                        <img src={asset33} alt="invite" className='w-10' onClick={() => (isBetween() || true) ?
-                            navigate('/withdrawal', { state: { withdrawalPassword: originalwpwd, loginPassword: originalpwd } }) : toaster('You are not in the withdrawl time window')
+                        <img src={asset33} alt="invite" className='w-10' onClick={() => isBetween() ?
+                            navigate('/withdrawal', { state: { withdrawalPassword: originalwpwd, loginPassword: originalpwd } }) : toaster('You can withdraw only between 10:00 AM to 7:00 PM')
                         } />
                         <div>Withdrawal</div>
                     </div>
