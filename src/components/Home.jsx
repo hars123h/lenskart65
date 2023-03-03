@@ -354,11 +354,13 @@ const Home = () => {
                             <div>Channel</div>
                         </div>
                     </a>
-
-                    <div className='cursor-pointer mx-2 flex flex-col justify-center items-center '>
-                        <img src={asset31} alt="recharge" className='w-10' />
-                        <div>Online</div>
-                    </div>
+                    
+                    <a href="https://wa.me/qr/QN6HWT7MXJNTM1" className=' no-underline  cursor-pointer'>
+                        <div className='cursor-pointer mx-2 flex flex-col justify-center items-center'>
+                            <img src={asset31} alt="online" className='w-10' />
+                            <div>Online</div>
+                        </div>
+                    </a>
 
                     <div className='cursor-pointer mx-2 flex flex-col justify-center items-center'>
                         <img src={asset32} alt="recharge" className='w-10' onClick={() => navigate('/recharge')} />
