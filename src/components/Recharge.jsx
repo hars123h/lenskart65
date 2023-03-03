@@ -70,7 +70,7 @@ const Recharge = () => {
                 <div className='m-1 text-sm text-gray-500 mb-4 '>Enter Amount:</div>
                 <div className='m-1 w-full flex items-center border-b border-gray-500 pb-2'>
                     <span className='text-red-700 font-bold p-0.5 text-xs pr-1 '>*₹</span>
-                    <input onChange={(e) => setRecharge_Value(e.target.value)} type="text" name="amount" id="amt" placeholder='Amount' className='w-full bg-inherit text-[#fff] outline-none font-normal text-lg ' />
+                    <input onChange={(e) => setRecharge_Value(e.target.value)} type="text" name="amount" id="amt" placeholder='Amount' className='w-full bg-inherit text-red-800 outline-none font-normal text-lg ' />
                 </div>
 
                 <div className="cnf_recharge w-[85%] mx-auto mt-7">
