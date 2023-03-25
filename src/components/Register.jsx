@@ -129,51 +129,52 @@ const Register = () => {
                 </div> : null}
                 <div className='text-sm'>{text}</div>
             </div> : null}
-            <div className='text-center bg-red-800 font-sans text-white pt-2 text-lg 
-    pb-2'> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 absolute left-2 cursor-pointer hover:bg-white hover:stroke-black hover:rounded-full transition rounded-full ease-in-out delay-150 duration-200">
+            <div className='flex items-center text-center bg-red-800 font-sans text-white pt-2 text-lg pb-2'>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 absolute left-2 opacity-50 cursor-pointer hover:bg-white hover:stroke-black hover:rounded-full transition rounded-full ease-in-out delay-150 duration-200">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
-                Register</div>
-            <div className='text-center'>
-                <img src={alogo} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mt-10 mb-8' width={240} />
+                <div className='flex-grow font-[400]'>Register</div>
             </div>
-            <div style={{ boxShadow: " -1px 1px 5px 5px rgb(209, 213, 219)" }} className="box mb-20   gap-2 m-auto  rounded-xl lg:w-2/5 w-[85%]  p-4 w-50% flex flex-col">
-                <div className='outline-none flex items-center justify-between mb-2  rounded-full'>
-                    <div className='w-full border border-gray-300 rounded-full px-2'>
+            <div className='text-center'>
+                <img src={alogo} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mt-10 mb-4 ' width={"70%"} />
+            </div>
+            <div style={{ boxShadow: "0 0.053333rem 0.533333rem 0.053333rem #dfdfdf" }} className="box mb-20   gap-2 m-auto  rounded-xl lg:w-2/5 w-[88%]  p-4 w-50% flex flex-col">
+                <div className='outline-none flex items-center justify-between mb-2  rounded-full border border-gray-200'>
+                    <div className='w-full cstm_b rounded-full px-2'>
                         <input value={mobno} onChange={e => setMobno(e.target.value)} type="text"
-                            className=' p-1 w-full  outline-none rounded-full rounded-tr-full placeholder-gray-600 placeholder:text-xs' placeholder='Phone Number' name="phoneno" id="phoneno" />
+                            className=' p-[7px] w-full  outline-none rounded-full rounded-tr-full placeholder-gray-600 placeholder:text-[14px]' placeholder='Please enter a valid phone number' name="phoneno" id="phoneno" />
                     </div>
                 </div>
                 {/* <div className='flex border-b-2 border-gray-300 rounded-full mb-2 px-2 bg-white'>
-                <input type="text" onChange={e => setOtp(e.target.value)} className='p-2 w-[90%] outline-none rounded-full' placeholder='Please enter the OTP' name="otp" id="otp" />
-                <button className='bg-red-800 text-white text-xs mr-1 px-4 my-1  rounded-full' onClick={() => handleOTPSend(String(Math.floor(100000 + Math.random() * 900000)))}>OTP</button>
-            </div> */}
-                <div className=' flex justify-between bg-white items-center mb-2 outline-none border border-gray-300 rounded-full px-2'>
+            <input type="text" onChange={e => setOtp(e.target.value)} className='p-2 w-[90%] outline-none rounded-full' placeholder='Please enter the OTP' name="otp" id="otp" />
+            <button className='bg-red-800 text-white text-xs mr-1 px-4 my-1  rounded-full' onClick={() => handleOTPSend(String(Math.floor(100000 + Math.random() * 900000)))}>OTP</button>
+        </div> */}
+                <div className=' flex justify-between bg-white items-center mb-2 outline-none cstm_b  rounded-full px-2 border border-gray-200'>
                     <input value={pwd} onChange={e => setpwd(e.target.value)} type="password"
-                        className='p-1 outline-none  rounded-full w-[90%] placeholder-gray-600 placeholder:text-xs' placeholder='Please enter login password' name="passowrd" id="pass" />
+                        className='p-[7px] outline-none  rounded-full w-[90%] placeholder-gray-600 placeholder:text-[14px]' placeholder='Please enter login password' name="passowrd" id="pass" />
                     <img src={close_eye} alt="close_eye" width={30} className="p-1" />
                 </div>
 
-                <div className='flex justify-between bg-white items-center mb-2 outline-none border border-gray-300 rounded-full px-2'>
+                <div className='flex justify-between bg-white items-center mb-2 outline-none cstm_b rounded-full px-2 border border-gray-200'>
                     <input value={cpwd} onChange={e => setCpwd(e.target.value)} type="password"
-                        className='p-1 outline-none  rounded-full w-[90%] placeholder-gray-600 placeholder:text-xs' placeholder='Please confirm the login password' name="cnfpass" id="cnfpass" />
+                        className='p-[7px] outline-none  rounded-full w-[90%] placeholder-gray-600 placeholder:text-[14px]' placeholder='Please confirm the login password' name="cnfpass" id="cnfpass" />
                     <img src={close_eye} alt="close_eye" width={30} className="p-1" />
                 </div>
 
-                <div className='flex justify-between bg-white items-center mb-2 outline-none border border-gray-300 rounded-full px-2'>
+                <div className='flex justify-between bg-white items-center mb-2 outline-none cstm_b rounded-full px-2 border border-gray-200'>
                     <input value={wpwd} onChange={e => setwpwd(e.target.value)} type="password"
-                        className='p-1 outline-none  rounded-full w-[90%] placeholder-gray-600 placeholder:text-xs' placeholder="Please enter the Withdrawal password" name="withpassword" id="wthpass" />
+                        className='p-[7px] outline-none  rounded-full w-[90%] placeholder-gray-600 placeholder:text-[14px]' placeholder="Please enter the Withdrawal password" name="withpassword" id="wthpass" />
                     <img src={close_eye} alt="close_eye" width={30} className="p-1" />
                 </div>
 
-                <div className='flex justify-between bg-white items-center mb-2 outline-none border border-gray-300 rounded-full px-2'>
-                    <input value={invt} onChange={e => setInvt(e.target.value)} type="text" 
-                    className='p-1 outline-none  rounded-full w-[90%] placeholder-gray-600 placeholder:text-xs' placeholder='Invitation code' name="invite_code" id="inv_code" />
+                <div className='flex justify-between bg-white items-center mb-2 outline-none cstm_b rounded-full px-2 border border-gray-200'>
+                    <input value={invt} onChange={e => setInvt(e.target.value)} type="text"
+                        className='p-[7px] outline-none  rounded-full w-[90%] placeholder-gray-600 placeholder:text-[14px]' placeholder='Invitation code' name="invite_code" id="inv_code" />
                 </div>
 
 
-                <button onClick={handleRegister} className='bg-red-800 text-white pt-2 pb-1 rounded-full text-lg'>Register</button>
-                <div onClick={() => navigate('/login')} className='cursor-pointer text-center text-red-800 mt-2 p-2 mb-2 bg-white font-medium  rounded-full border border-gray-200'>
+                <button onClick={handleRegister} className='bg-red-800 text-white text-center py-[5px]  rounded-full text-lg'>Register</button>
+                <div onClick={() => navigate('/login')} className='cursor-pointer text-center text-red-800  p-[7px] mb-2 bg-white  rounded-full border border-gray-200'>
                     Already have an account, log in
                 </div>
             </div>

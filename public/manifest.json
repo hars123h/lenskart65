@@ -1,19 +1,19 @@
 {
-  "short_name": "lenscart65",
+  "short_name": "Anveshank6",
   "name": "WebApp",
   "icons": [
     {
-      "src": "lenskart_logo.png",
+      "src": "mbag.png",
       "sizes": "200x54",
       "type": "image/x-icon"
     },
     {
-      "src": "lenskart_logo.png",
+      "src": "mbag.png",
       "type": "image/png",
       "sizes": "200x54"
     },
     {
-      "src": "lenskart_logo.png",
+      "src": "mbag.png",
       "type": "image/png",
       "sizes": "200x54"
     }
