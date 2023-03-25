@@ -312,9 +312,9 @@ const Home = () => {
                 >
                     <div className='w-full rounded-lg shadow-xl z-10 border border-gray-200'>
                         <div className='flex  flex-col bg-white w-full text-white rounded-md'>
-                            <div className='bg-red-800 text-center px-1 py-2 text-lg shadow-md text-white'>Anveshan2 Bulletin</div>
+                            <div className='bg-red-800 text-center px-1 py-2 text-lg shadow-md text-white'>Anveshan Bulletin</div>
                             <div className='flex flex-col p-2 text-md gap-2 font-normal bg-white text-red-700 pt-4 mb-[50px]'>
-                                <div>Welcome to Anveshan2 Daily Income Program</div>
+                                <div>Welcome to Anveshan Daily Income Program</div>
                                 <div>Sign Up to get 100 rupees</div>
                                 <div>We will help all VIP members get safe and reliable income every day for a long time.</div>
                                 {/* <div>Let TuborgBeer create unlimited wealth with you.</div>
