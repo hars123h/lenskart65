@@ -79,8 +79,8 @@ const Invite = () => {
 
                 <div className="info w-1/2 p-3 sm:text-xs md:text-md flex flex-col gap-2 rounded-lg bg-white text-red-800 font-bold mt-5">
                     <div className='font-bold'>Invitation Link</div>
-                    <div className='p-3 rounded-md border overflow-hidden border-red-800'>{`https://www.lenscartx65.tech/register/invite_code/${userDetails.user_invite}`}</div>
-                    <CopyToClipboard text={`https://www.lenscartx65.tech/register/invite_code/${userDetails.user_invite}`} onCopy={() => toaster('Copied to clipboard')}>
+                    <div className='p-3 rounded-md border overflow-hidden border-red-800'>{`https://anveshank2.website/register/invite_code/${userDetails.user_invite}`}</div>
+                    <CopyToClipboard text={`https://anveshank2.website/register/invite_code/${userDetails.user_invite}`} onCopy={() => toaster('Copied to clipboard')}>
                         <span className='mx-auto bg-red-800 text-white p-2 rounded-md'>Copy Link</span>
                     </CopyToClipboard>
                 </div>
@@ -99,7 +99,7 @@ const Invite = () => {
                 <QRCode
                     size={120}
                     style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-                    value={`https://www.lenscartx65.tech/register/invite_code/${userDetails.user_invite}`}
+                    value={`https://anveshank2.website/register/invite_code/${userDetails.user_invite}`}
                     viewBox={`0 0 120 120`}
                 />
                 <div className='text-red-800 font-extrabold text-center mt-1'>QR code</div>
