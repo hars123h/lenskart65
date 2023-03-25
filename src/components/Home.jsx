@@ -359,19 +359,19 @@ const Home = () => {
             {/*Navigation bar */}
             <div className="bg-white  text-black font-semibold relative flex overflow-x-hidden  mx-auto py-2  sm:w-3/5 lg:w-3/5 overflow-y-hidden">
                 <div className="flex flex-row justify-around text-xs items-center w-full py-2 px-3">
-                    <a href="https://t.me/LensKartEarningApp" className=' no-underline  cursor-pointer'>
+                    <a href="https://t.me/AnveshanK2" className=' no-underline  cursor-pointer'>
                         <div className='cursor-pointer mx-2 flex flex-col justify-center items-center'>
                             <img src={asset30} alt="online" className='w-10' />
                             <div>Channel</div>
                         </div>
                     </a>
                     
-                    <a href="https://wa.me/qr/QN6HWT7MXJNTM1" className=' no-underline  cursor-pointer'>
+                    {/* <a href="https://wa.me/qr/QN6HWT7MXJNTM1" className=' no-underline  cursor-pointer'> */}
                         <div className='cursor-pointer mx-2 flex flex-col justify-center items-center'>
                             <img src={asset31} alt="online" className='w-10' />
                             <div>Online</div>
                         </div>
-                    </a>
+                    {/* </a> */}
 
                     <div className='cursor-pointer mx-2 flex flex-col justify-center items-center'>
                         <img src={asset32} alt="recharge" className='w-10' onClick={() => navigate('/recharge')} />
