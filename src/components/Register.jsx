@@ -17,6 +17,7 @@ import { Typography } from '@material-ui/core';
 import wind_login from '../images/wind_login.jpg'
 import lenskart_logo from '../images/lenskart_logo.png';
 import tuborg_logo from '../images/tuborg_logo.svg';
+import alogo from '../images/anvesh/alogo.png';
 
 
 
@@ -134,7 +135,7 @@ const Register = () => {
                 </svg>
                 Register</div>
             <div className='text-center'>
-                <img src={lenskart_logo} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mt-8 mb-2' width={240} />
+                <img src={alogo} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mt-8 mb-2' width={240} />
             </div>
             <div style={{ boxShadow: " -1px 1px 5px 5px rgb(209, 213, 219)" }} className="box mb-20   gap-2 m-auto  rounded-xl lg:w-2/5 w-[85%]  p-4 w-50% flex flex-col">
                 <div className='outline-none flex items-center justify-between mb-2  rounded-full'>

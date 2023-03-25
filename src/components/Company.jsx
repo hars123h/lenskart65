@@ -5,6 +5,9 @@ import waltonbd_logo from '../images/waltonbd_logo.jpg'
 import tuborg_company from '../images/tuborg_company.jpg';
 import asset43 from '../images/assets4/asset 0.jpeg'
 import lenskart_logo from '../images/lenskart_logo.png';
+import alogo from '../images/anvesh/alogo.png';
+import blogo from '../images/anvesh/blogo.jpg';
+import clogo from '../images/anvesh/clogo.jpg';
 
 
 
@@ -23,7 +26,7 @@ const Company = () => {
             </div>
 
             <div className="hp_company mt-10">
-                <img src={lenskart_logo} alt="hp" className='sm:w-3/6 md:w-2/6 mx-auto' width={240} />
+                <img src={alogo} alt="hp" className='sm:w-3/6 md:w-2/6 mx-auto' width={240} />
             </div>
 
             <div className=" cpy_info sm:w-4/5 lg:w-3/4 mx-auto mt-5">
@@ -33,28 +36,69 @@ const Company = () => {
             </div>
 
             <div className="part sm:w-4/5 lg:w-3/4 mx-auto text-white  mt-4">
-                <div className="heading font-bold mb-1">Lenskart</div>
+                <div className="heading font-bold mb-1">Anveshank</div>
                 <hr />
                 <div className="data text-sm mt-2">
-                    Founded in 2010, By an ex-Microsoft 'techie' with no money but truckloads of relentless passion to make a difference in this world, Lenskart is India's fastest growing eyewear business today.
+                    Our Founder  <br /> <br />
+                    Young and agile graduates from IIT Guwahati wanted to use their technical skills in the food and agriculture industry. They have the vision to bring food processing to the farm level and provide traditional superfoods to everyone               </div>
+                <br />
+                We are a community of farmer families (Anveshan village micro-entrepreneurs) spread across India. We have set up micro food processing units near the farms. This has helped generate rural employment, facilitate fair trade with the farmers, provide them with resources and eradicate middlemen from the supply chain.
+            </div>
 
-                    With a rapidly growing business reaching out to over 1,00,000 customers a month via a unique combination of a strong online business  uniquely designed physical stores, as well as a first of its kind 'home eye check up' service, Lenskart is revolutionizing the eyewear industry in India.                </div>
+            <div className="hp_company mt-10">
+                <img src={blogo} alt="hp" className='sm:w-3/6 md:w-2/6 mx-auto' width={340} />
             </div>
 
             <div className="part sm:w-4/5 lg:w-3/4 mx-auto text-white mt-4">
                 <div className="heading font-bold mb-1">Our Cause</div>
                 <hr />
                 <div className="data text-sm mt-2">
-                    1/3rd of our population needs glasses but doesn't have access to them, making us the blind capital of the world with over 15 million blind people.
+                    Purest form of authentic food
+                    We assure to provide you with wholesome, chemical-free and preservative-free food straight from the farms.
+                    <br />
+                    Minimally processed using traditional methods
+                    The food is infused with our ancestors' passed on Ayurvedic and traditional wisdom. This ensures that all the natural nutrients and flavours are intact.
+                    <br />
+                    Prepared locally by farmer families
+                    All the products are prepared with love by our micro-entrepreneurs in villages. Each time you buy from us, you help secure and empower rural livelihoods.
+                    <br />
+                    With farm-to-fork transparency
+                    Your food is monitored from procurement to delivery. Our supply chain is tech-enabled to assess quality parameters at each step. We have in-house, state-of-the-art certified labs to test every batch before packaging.
+                    <br />
+                    How Do We Do It?
 
-                    With the cause in mind, Peyush along with his two co-founders Amit Chaudhary and Sumeet Kapahi founded 'VALYOO technologies'.
+                    <br />
+                    Our Journey So Far
+                    Load video:
 
-                    The aim was in truly add 'valyoo' in customers' lives by eliminating the retailers, setting up our own high quality manufacturing and supply directly to the consumer everywhere in India. This not only cuts costs,but also helps us maintain high quality standards. Our in house robotic lens manufacturing and assembling ensures 100% precision and top quality control.
+                    <div className="hp_company mt-10">
+                        <img src={clogo} alt="hp" className='sm:w-3/6 md:w-2/6 mx-auto' width={240} />
+                    </div>
 
-                    Offering the best quality products at affordable prices helped us grow more than 200% in the last 2 years and we are among the top 3 optical businesses in India today. From servicing 30 customers per day to more than 3000 today, we have came a long way. Our commitment to consumer satisfaction and innovative technologies has given us tremendous support from those who believe in our cause.                                   </div>
+                    <br />
+                    SUBSCRIBE TO OUR NEWSLETTER
+                    Email
+                    Email
+                    SERVICES
+                    POLICIES
+                    NEED HELP?
+                    Contact Us
+
+                    Grievance Redressal Officer: Shashwat Singh
+
+                    Twitter
+                    Facebook
+                    Instagram
+                    TikTok
+                    Copyright © 2023, Anveshan Farm Technologies Pvt. Ltd.
+                    Home
+                    Shop
+                    Deals
+                    0
+                </div>
             </div>
 
-            <div className="part sm:w-4/5 lg:w-3/4 mx-auto text-white mt-4">
+            {/* <div className="part sm:w-4/5 lg:w-3/4 mx-auto text-white mt-4">
                 <div className="heading font-bold mb-1">Our Trust</div>
                 <hr />
                 <div className="data text-sm mt-2">
@@ -70,7 +114,7 @@ const Company = () => {
                     <br />
                     *With every frame or contact lenses, we provide authenticity card as a proof of quality and authenticity.
                 </div>
-            </div>
+            </div> */}
 
             {/* <div className="part sm:w-4/5 lg:w-3/4 mx-auto text-white mt-4">
                 <div className="heading font-bold mb-1">Awards</div>

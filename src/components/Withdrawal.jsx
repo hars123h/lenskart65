@@ -49,26 +49,26 @@ const Withdrawal = () => {
     const [toasterText, setToasterText] = useState('');
     const [modalIsOpen, setIsOpen] = useState(false);
 
-    const toaster = (text, arg='') => {
+    const toaster = (text, arg = '') => {
         setToasterText(text);
         setToasterShow(true);
-        setTimeout(()=>{
+        setTimeout(() => {
             setToasterShow(false);
-            if(arg==='/record') {
+            if (arg === '/record') {
                 setIsOpen(false);
                 navigate('/record');
             }
-            if(arg==='/bank') {
+            if (arg === '/bank') {
                 navigate('/bank', { state: { withdrawalPassword: loc.state.withdrawalPassword, loginPassword: loc.state.loginPassword } });
             }
-        },2000);
+        }, 2000);
     }
 
     useEffect(() => {
         const getDetails = async () => {
-            const docRef = await axios.post(`${BASE_URL}/get_user`, {user_id: localStorage.getItem('uid')}).then(({data})=>data);
+            const docRef = await axios.post(`${BASE_URL}/get_user`, { user_id: localStorage.getItem('uid') }).then(({ data }) => data);
             if (docRef) {
-                if (docRef.bank_details.bankAccount.length===0) {
+                if (docRef.bank_details.bankAccount.length === 0) {
                     toaster('Fill bank details first!', '/bank');
                 } else {
                     setDetails(docRef.bank_details);
@@ -81,8 +81,30 @@ const Withdrawal = () => {
         }
         getDetails();
         document.body.style.backgroundColor = "#f2f2f2";
-        
+
     }, []);
+
+    const isBetween = () => {
+        var startTime = '10:00:00';
+        var endTime = '19:00:00';
+
+        var currentDate = new Date()
+
+        var startDate = new Date(currentDate.getTime());
+        startDate.setHours(startTime.split(":")[0]);
+        startDate.setMinutes(startTime.split(":")[1]);
+        startDate.setSeconds(startTime.split(":")[2]);
+
+        var endDate = new Date(currentDate.getTime());
+        endDate.setHours(endTime.split(":")[0]);
+        endDate.setMinutes(endTime.split(":")[1]);
+        endDate.setSeconds(endTime.split(":")[2]);
+
+
+        var valid = startDate < currentDate && endDate > currentDate;
+        //console.log(valid);
+        return valid;
+    }
 
 
     const handleWithdrawalAmount = (e) => {
@@ -116,30 +138,30 @@ const Withdrawal = () => {
             toaster('You dont have enough balance');
             return;
         }
-//&& otp === otpfield
-        if (wpassword === loc.state.withdrawalPassword ) {
+        //&& otp === otpfield
+        if (wpassword === loc.state.withdrawalPassword) {
             try {
                 //const docRef1 = 
                 var temp_details = details;
                 delete temp_details._id;
-                await axios.post(`${BASE_URL}/place_withdrawal`, { 
-                    withdrawalAmount: (Number(wamount)), 
-                    ...temp_details, 
-                    afterDeduction: (Number(wamount) - (Number(amountDetails.withdrawal_fee) * Number(wamount) / 100)), 
-                    user_id: localStorage.getItem('uid'), 
-                    time:new Date(),
+                await axios.post(`${BASE_URL}/place_withdrawal`, {
+                    withdrawalAmount: (Number(wamount)),
+                    ...temp_details,
+                    afterDeduction: (Number(wamount) - (Number(amountDetails.withdrawal_fee) * Number(wamount) / 100)),
+                    user_id: localStorage.getItem('uid'),
+                    time: new Date(),
                     balance: balance,
-                    status: 'pending' 
-                }).then(()=>{
-                toaster('Withdrawal request placed successfully!', '/record');
-                setIsOpen(false);
-                }).catch(e=>{
+                    status: 'pending'
+                }).then(() => {
+                    toaster('Withdrawal request placed successfully!', '/record');
+                    setIsOpen(false);
+                }).catch(e => {
                     console.log(e);
                 })
-                
+
             } catch (e) {
                 console.error("Error adding document: ", e);
-                
+
             }
         } else {
             toaster('Withdrawal Password is incorrect');
@@ -167,16 +189,20 @@ const Withdrawal = () => {
     }
 
     const handleLastButton = () => {
+        if(!isBetween()) {
+            toaster('You can withdraw only between 10:00 AM to 7:00 PM');
+            return;
+        }
         openModal();
     }
     //[#2e9afe]
     return (
         <div className='bg-withdraw flex flex-col  sm:h-[1000px] md:h-[950px] relative'>
-            {toasterShow?<div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-                <div className='flex gap-2 bg-black opacity-80 text-white px-2 py-1 rounded-md'>
-                    <div>{toasterText}</div>
+            {toasterShow ? <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full'>
+                <div className='flex w-4/5 mx-auto  items-center justify-center gap-2 bg-black opacity-80 text-white px-4 py-2 rounded-md'>
+                    {toasterText}
                 </div>
-            </div>:null}
+            </div> : null}
             <div>
                 <ReactModal
                     isOpen={modalIsOpen}
@@ -193,14 +219,14 @@ const Withdrawal = () => {
                 </ReactModal>
             </div>
             <div className="options flex bg-red-800 items-center text-center text-white text-lg py-1 px-1 font-normal">
-            <svg xmlns="http://www.w3.org/2000/svg"
+                <svg xmlns="http://www.w3.org/2000/svg"
                     onClick={() => navigate('/home')} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
                     className="w-5 h-5   storke-white  cursor-pointer stroke-white">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
                 <div className='flex-grow'>Withdraw</div>
             </div>
-{/*| After Deduction} | Rs.{(Number(wamount) - (Number(amountDetails.withdrawal_fee) * Number(wamount) / 100))}*/}
+            {/*| After Deduction} | Rs.{(Number(wamount) - (Number(amountDetails.withdrawal_fee) * Number(wamount) / 100))}*/}
             <div className="part1 bg-white p-3 rounded-lg mx-3 mt-5">
                 <div className='text-red-800 px-2 my-1  rounded-full border border-red-800 inline'>Tax {amountDetails.withdrawal_fee}% </div>
                 <div className='flex items-center justify-start gap-2 my-1'>
@@ -217,7 +243,7 @@ const Withdrawal = () => {
                 {/* #87a1c3  border-[#87a1c3]*/}
                 <div className="balance flex items-center justify-between text-gray-600 text-md p-3 border-b border-gray-200">
                     <div className="phoneno">Phone Number:</div>
-                    <div className='text-black text-sm'>{details.phoneNo.substring(0,3)+"****"+details.phoneNo.substring(7)}</div>
+                    <div className='text-black text-sm'>{details.phoneNo.substring(0, 3) + "****" + details.phoneNo.substring(7)}</div>
                 </div>
 
                 <div className="balance flex items-center justify-between text-gray-600 text-md p-3 border-b border-gray-200">
@@ -253,11 +279,11 @@ const Withdrawal = () => {
                 <div className='text-pink-600 font-medium'>* Correctly fill in the bank information IFSC code, payee name, bank card number, otherwise the withdrawal will fail.</div>
                 <div className='text-pink-600 font-medium'>* The actual arrival time of all withdrawals is subject to the processing time of the local bank.</div>
             </div>
-            
+
             {/* [#2e9afe] */}
-           
+
             <button onClick={handleLastButton} className='bg-red-800 text-white text-lg mt-5 mx-auto  mb-20  shadow-md block w-[95%] py-2 shadow-slate-400'>Confirm</button>
-            
+
         </div>
     )
 }

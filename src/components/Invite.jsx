@@ -41,6 +41,7 @@ const Invite = () => {
     useLayoutEffect(() => {
         getUserDetails();
         setLoading(false);
+        document.body.style.backgroundColor = "#05a081";
     }, []);
 
     if (loading || userDetails === null) {
